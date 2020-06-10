@@ -74,10 +74,9 @@ def create_pivot(df, index_list=["Manager", "Rep", "Product"],
     Take a DataFrame and create a pivot table
     Return it as a DataFrame pivot table
     """
-    table = pd.pivot_table(df, index=index_list,
+    return pd.pivot_table(df, index=index_list,
                            values=value_list,
                            aggfunc=[np.sum, np.mean], fill_value=0)
-    return table
 
 
 def create_chart(df, filename):
